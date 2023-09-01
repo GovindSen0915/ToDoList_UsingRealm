@@ -25,6 +25,15 @@ class ViewController: UIViewController {
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addTextField { firstnameField in
+            firstnameField.placeholder = "Enter your firstname"
+        }
+        
+        alertController.addTextField { lastnameField in
+            lastnameField.placeholder = "Enter your lastname"
+        }
+        
         alertController.addAction(save)
         alertController.addAction(cancel)
         present(alertController, animated: true)
@@ -43,7 +52,7 @@ extension ViewController {
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        <#code#>
 //    }
-//    
+//
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        <#code#>
 //    }
