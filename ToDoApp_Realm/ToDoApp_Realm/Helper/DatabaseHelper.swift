@@ -8,12 +8,23 @@
 import UIKit
 import RealmSwift
 
+// Singleton class
 class DatabaseHelper {
     static let shared = DatabaseHelper()
     
     private var realm = try! Realm()
     
-    func saveContact() {
-        
+    func getDatabaseURL() -> URL? {
+        return Realm.Configuration.defaultConfiguration.fileURL
+    }
+    
+    func saveContact(contact: Contact) {
+        try! realm.write{
+            realm.add(contact)
+        }
+    }
+    
+    func getAllContacts() -> [Contact] {
+        return Array(realm.objects(Contact.self))
     }
 }

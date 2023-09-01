@@ -31,6 +31,7 @@ extension ViewController {
         contactTableView.dataSource = self
         contactTableView.delegate = self
         contactTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        contactArray = DatabaseHelper.shared.getAllContacts()
     }
     
     func contactConfiguration(isAdd: Bool, index: Int) {
@@ -43,6 +44,7 @@ extension ViewController {
                 
                 if isAdd {
                     self.contactArray.append(contact)
+                    DatabaseHelper.shared.saveContact(contact: contact)
                 } else {
                     self.contactArray[index] = contact
                 }
