@@ -56,15 +56,71 @@
 		E8E059052AA176C1005237A6 /* ToDoApp_Realm */ = {
 			isa = PBXGroup;
 			children = (
-				E8E059062AA176C1005237A6 /* AppDelegate.swift */,
-				E8E059082AA176C1005237A6 /* SceneDelegate.swift */,
-				E8E0590A2AA176C1005237A6 /* ViewController.swift */,
-				E8E0590C2AA176C1005237A6 /* Main.storyboard */,
-				E8E0590F2AA176C2005237A6 /* Assets.xcassets */,
-				E8E059112AA176C2005237A6 /* LaunchScreen.storyboard */,
+				E8E059202AA17B58005237A6 /* Resources */,
+				E8E0591F2AA17B39005237A6 /* Application */,
+				E8E0591E2AA17B24005237A6 /* Storyboard */,
+				E8E0591C2AA17AF8005237A6 /* ViewModel */,
+				E8E0591B2AA17AF1005237A6 /* View */,
+				E8E0591A2AA17AE9005237A6 /* Model */,
 				E8E059142AA176C2005237A6 /* Info.plist */,
 			);
 			path = ToDoApp_Realm;
+			sourceTree = "<group>";
+		};
+		E8E0591A2AA17AE9005237A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8E0591B2AA17AF1005237A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8E0591D2AA17B08005237A6 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8E0591C2AA17AF8005237A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8E0591D2AA17B08005237A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8E0590A2AA176C1005237A6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8E0591E2AA17B24005237A6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E8E0590C2AA176C1005237A6 /* Main.storyboard */,
+				E8E059112AA176C2005237A6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E8E0591F2AA17B39005237A6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E8E059062AA176C1005237A6 /* AppDelegate.swift */,
+				E8E059082AA176C1005237A6 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E8E059202AA17B58005237A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8E0590F2AA176C2005237A6 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
