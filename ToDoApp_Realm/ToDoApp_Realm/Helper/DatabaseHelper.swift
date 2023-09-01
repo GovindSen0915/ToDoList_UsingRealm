@@ -24,6 +24,12 @@ class DatabaseHelper {
         }
     }
     
+    func deleteContact(contact: Contact) {
+        try! realm.write {
+            realm.delete(contact)
+        }
+    }
+    
     func getAllContacts() -> [Contact] {
         return Array(realm.objects(Contact.self))
     }

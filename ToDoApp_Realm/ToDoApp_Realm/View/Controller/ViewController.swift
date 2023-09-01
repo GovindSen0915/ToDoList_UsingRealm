@@ -96,6 +96,7 @@ extension ViewController: UITableViewDelegate {
         edit.backgroundColor = UIColor.systemMint
 
         let delete = UIContextualAction(style: .destructive, title: "delete") { _, _, _ in
+            DatabaseHelper.shared.deleteContact(contact: self.contactArray[indexPath.row])
             self.contactArray.remove(at: indexPath.row)
             self.contactTableView.reloadData()
         }
