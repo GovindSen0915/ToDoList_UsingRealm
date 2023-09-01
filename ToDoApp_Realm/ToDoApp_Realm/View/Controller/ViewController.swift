@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var contactTableView: UITableView!
     
     var contactArray = [Contact]()
@@ -22,8 +21,6 @@ class ViewController: UIViewController {
     @IBAction func addContactButtonTapped(_ sender: UIBarButtonItem) {
         contactConfiguration(isAdd: true, index: 0)
     }
-    
-
 }
 
 extension ViewController {
@@ -46,7 +43,7 @@ extension ViewController {
                     self.contactArray.append(contact)
                     DatabaseHelper.shared.saveContact(contact: contact)
                 } else {
-//                    self.contactArray[index] = contact
+                    //                    self.contactArray[index] = contact
                     DatabaseHelper.shared.updateContact(oldContact: self.contactArray[index], newContact: contact)
                 }
                 
@@ -70,11 +67,12 @@ extension ViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contactArray.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard var cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
             return UITableViewCell()
@@ -88,20 +86,22 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+
+// MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let edit = UIContextualAction(style: .normal, title: "Edit") { _, _, _ in
-        self.contactConfiguration(isAdd: false, index: indexPath.row)
+            self.contactConfiguration(isAdd: false, index: indexPath.row)
         }
         edit.backgroundColor = UIColor.systemMint
-
+        
         let delete = UIContextualAction(style: .destructive, title: "delete") { _, _, _ in
             DatabaseHelper.shared.deleteContact(contact: self.contactArray[indexPath.row])
             self.contactArray.remove(at: indexPath.row)
             self.contactTableView.reloadData()
         }
-
+        
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [delete, edit])
         return swipeConfiguration
     }
