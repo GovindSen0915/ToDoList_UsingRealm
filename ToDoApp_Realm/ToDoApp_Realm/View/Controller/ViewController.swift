@@ -31,6 +31,7 @@ extension ViewController {
         contactTableView.dataSource = self
         contactTableView.delegate = self
         contactTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        contactArray = DatabaseHelper.shared.getAllContacts()
     }
     
     func contactConfiguration(isAdd: Bool, index: Int) {
@@ -43,8 +44,10 @@ extension ViewController {
                 
                 if isAdd {
                     self.contactArray.append(contact)
+                    DatabaseHelper.shared.saveContact(contact: contact)
                 } else {
-                    self.contactArray[index] = contact
+//                    self.contactArray[index] = contact
+                    DatabaseHelper.shared.updateContact(oldContact: self.contactArray[index], newContact: contact)
                 }
                 
                 self.contactTableView.reloadData()
@@ -94,6 +97,7 @@ extension ViewController: UITableViewDelegate {
         edit.backgroundColor = UIColor.systemMint
 
         let delete = UIContextualAction(style: .destructive, title: "delete") { _, _, _ in
+            DatabaseHelper.shared.deleteContact(contact: self.contactArray[indexPath.row])
             self.contactArray.remove(at: indexPath.row)
             self.contactTableView.reloadData()
         }

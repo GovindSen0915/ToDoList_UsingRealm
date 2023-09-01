@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10BEA581C75639E078760E27 /* Pods_ToDoApp_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214BA4B93046C2E6E67C5000 /* Pods_ToDoApp_Realm.framework */; };
+		E85173B52AA1CEED00B5623E /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85173B42AA1CEED00B5623E /* DatabaseHelper.swift */; };
 		E8E059072AA176C1005237A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E059062AA176C1005237A6 /* AppDelegate.swift */; };
 		E8E059092AA176C1005237A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E059082AA176C1005237A6 /* SceneDelegate.swift */; };
 		E8E0590B2AA176C1005237A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E0590A2AA176C1005237A6 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		214BA4B93046C2E6E67C5000 /* Pods_ToDoApp_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoApp_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E08ED45F85F63586FC93AF /* Pods-ToDoApp_Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp_Realm.debug.xcconfig"; path = "Target Support Files/Pods-ToDoApp_Realm/Pods-ToDoApp_Realm.debug.xcconfig"; sourceTree = "<group>"; };
 		D25CDDACFB7A94081635C597 /* Pods-ToDoApp_Realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp_Realm.release.xcconfig"; path = "Target Support Files/Pods-ToDoApp_Realm/Pods-ToDoApp_Realm.release.xcconfig"; sourceTree = "<group>"; };
+		E85173B42AA1CEED00B5623E /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		E8E059032AA176C1005237A6 /* ToDoApp_Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp_Realm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E059062AA176C1005237A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E059082AA176C1005237A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +60,15 @@
 				49E08ED45F85F63586FC93AF /* Pods-ToDoApp_Realm.debug.xcconfig */,
 				D25CDDACFB7A94081635C597 /* Pods-ToDoApp_Realm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E85173B32AA1CED100B5623E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E85173B42AA1CEED00B5623E /* DatabaseHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E8E058FA2AA176C1005237A6 = {
@@ -83,6 +92,7 @@
 		E8E059052AA176C1005237A6 /* ToDoApp_Realm */ = {
 			isa = PBXGroup;
 			children = (
+				E85173B32AA1CED100B5623E /* Helper */,
 				E8E059202AA17B58005237A6 /* Resources */,
 				E8E0591F2AA17B39005237A6 /* Application */,
 				E8E0591E2AA17B24005237A6 /* Storyboard */,
@@ -267,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E059242AA1814E005237A6 /* Contact.swift in Sources */,
+				E85173B52AA1CEED00B5623E /* DatabaseHelper.swift in Sources */,
 				E8E0590B2AA176C1005237A6 /* ViewController.swift in Sources */,
 				E8E059072AA176C1005237A6 /* AppDelegate.swift in Sources */,
 				E8E059092AA176C1005237A6 /* SceneDelegate.swift in Sources */,
