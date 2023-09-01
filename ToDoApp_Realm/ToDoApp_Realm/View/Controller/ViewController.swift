@@ -46,7 +46,8 @@ extension ViewController {
                     self.contactArray.append(contact)
                     DatabaseHelper.shared.saveContact(contact: contact)
                 } else {
-                    self.contactArray[index] = contact
+//                    self.contactArray[index] = contact
+                    DatabaseHelper.shared.updateContact(oldContact: self.contactArray[index], newContact: contact)
                 }
                 
                 self.contactTableView.reloadData()

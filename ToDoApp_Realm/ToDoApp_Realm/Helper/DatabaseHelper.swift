@@ -30,6 +30,13 @@ class DatabaseHelper {
         }
     }
     
+    func updateContact(oldContact: Contact, newContact: Contact) {
+        try! realm.write {
+            oldContact.firstname = newContact.firstname
+            oldContact.lastname = newContact.lastname
+        }
+    }
+    
     func getAllContacts() -> [Contact] {
         return Array(realm.objects(Contact.self))
     }
