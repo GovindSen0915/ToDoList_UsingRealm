@@ -5,11 +5,11 @@ Simulator Demo
 https://github.com/GovindSen0915/ToDoList_UsingRealm/assets/85836893/0e050ef3-49d8-462c-9872-aee5f4f76d20
 
 Intro | Create | Read 
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+:-------------------------:|:-------------------------:|:-------------------------:
 <img alt="Products list" src="Screenshots/Step_1.png">|<img alt="Products list" src="Screenshots/Step_2.png">|<img alt="Products list" src="Screenshots/Step_3.png">
 
 Update | Delete | Result
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+:-------------------------:|:-------------------------:|:-------------------------:
 <img alt="Products list" src="Screenshots/Step_4.png">|<img alt="Products list" src="Screenshots/Step_5.png">|<img alt="Products list" src="Screenshots/Step_6.png">
 
 **Project Overview:**
